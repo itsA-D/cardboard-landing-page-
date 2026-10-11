@@ -519,6 +519,7 @@
 .loop-video-fallback::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 45%; background: linear-gradient(105deg, transparent, rgba(255,255,255,.06), transparent); animation: loop-shimmer 3.2s ease-in-out infinite; }
 .loop-video.is-ready .loop-video-fallback { opacity: 0; pointer-events: none; }
 .loop-video-el { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transform: translateZ(0); transition: opacity .4s ease; }
+.loop-video-el::-webkit-media-controls, .loop-video-el::-webkit-media-controls-enclosure, .loop-video-el::-webkit-media-controls-panel, .loop-video-el::-webkit-media-controls-overlay-play-button, .loop-video-el::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
 .loop-video.is-ready .loop-video-el { opacity: 1; }
 @keyframes loop-shimmer { from { transform: translateX(-140%) skewX(-14deg); } to { transform: translateX(240%) skewX(-14deg); } }
 .loop-video-label { position: absolute; left: 12px; bottom: 12px; z-index: 2; padding: 6px 12px; border-radius: 999px; font-size: 11px; line-height: 1; color: var(--video-ink); background: var(--video-glass); border: 1px solid var(--video-border); backdrop-filter: blur(14px) saturate(140%); }
@@ -548,22 +549,27 @@
 #showcase, #how-it-works { position: relative; isolation: isolate; }
 .showcase-section { padding-bottom: 96px; }
 
-/* Everything-you-need media panel */
-.feature-showcase { position: relative; display: grid; grid-template-columns: 1.4fr .6fr; gap: 20px; margin: 0 0 40px; padding: 26px; border-radius: 26px; overflow: hidden; background-size: cover; background-position: center; box-shadow: var(--glass-shadow); }
-.feature-window { border-radius: 18px; padding: 16px; }
-.feature-search { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--mut); padding: 10px 12px; border: 1px solid var(--bd); border-radius: 10px; margin-bottom: 14px; background: var(--soft); }
+/* Everything-you-need chapter panel: one fixed-height slide at a time. */
+.feature-showcase { position: relative; isolation: isolate; contain: paint; margin: 0 0 40px; padding: 26px 26px 16px; border-radius: 26px; overflow: hidden; background-size: cover; background-position: center; box-shadow: var(--glass-shadow); }
+.feature-carousel { position: relative; height: clamp(380px, 38vw, 460px); overflow: hidden; border-radius: 18px; isolation: isolate; contain: paint; }
+.feature-track { display: flex; height: 100%; transition: transform .6s cubic-bezier(.2,.8,.2,1); will-change: transform; }
+.feature-slide { flex: 0 0 100%; min-width: 0; box-sizing: border-box; height: 100%; display: grid; grid-template-columns: 100%; grid-template-rows: 100%; place-items: center; padding: 24px; overflow: hidden; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .5s ease, visibility 0s linear .5s; }
+.feature-slide.is-active { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .5s ease, visibility 0s linear 0s; }
+.feature-slide-body { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.feature-search { display: flex; align-items: center; gap: 8px; width: 100%; font-size: 12px; color: var(--mut); padding: 10px 12px; border: 1px solid var(--bd); border-radius: 10px; box-sizing: border-box; background: var(--soft); }
 .feature-search svg { width: 14px; height: 14px; }
-.feature-thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
-.feature-thumb { margin: 0; position: relative; border-radius: 9px; overflow: hidden; aspect-ratio: 1; }
-.feature-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.feature-thumb.is-best { outline: 2px solid var(--fg); outline-offset: -2px; }
-.feature-thumb figcaption { position: absolute; left: 6px; bottom: 6px; font-size: 9px; padding: 3px 7px; border-radius: 999px; background: var(--fg); color: var(--bg); }
-.feature-side { display: flex; flex-direction: column; gap: 14px; }
-.feature-phone { width: 46%; max-width: 180px; aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 20px; }
-.feature-phone .loop-video { width: 100%; height: 100%; }
-.feature-podcasts { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; flex: 1; min-height: 120px; }
-.feature-podcast { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: block; }
+.feature-thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; width: 100%; }
+.feature-thumb { justify-self: center; width: min(100%, clamp(56px, 9vw, 150px)); aspect-ratio: 1; object-fit: cover; border-radius: 9px; display: block; }
+.feature-best { padding: 7px 13px; border-radius: 999px; font-size: 11px; line-height: 1; background: oklch(0.972 0.008 255); color: oklch(0.216 0.042 251.6); }
+.feature-slide-podcast .feature-podcasts { width: 100%; height: 100%; align-self: stretch; justify-self: stretch; display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.feature-podcast { width: 100%; height: 100%; min-width: 0; object-fit: cover; border-radius: 10px; display: block; }
 .feature-podcast-1 { grid-row: 1 / 3; }
+.feature-podcast-4 { grid-column: 1 / -1; }
+.feature-slide-phone .feature-phone { width: 46%; max-width: 190px; max-height: 100%; aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 20px; }
+.feature-slide-phone .loop-video { width: 100%; height: 100%; }
+.feature-dots { display: flex; justify-content: center; align-items: center; gap: 7px; padding: 14px 0 2px; }
+.feature-dot { width: 7px; height: 7px; padding: 0; border: none; border-radius: 999px; background: var(--bd); cursor: pointer; transition: width .3s ease, background .3s ease; }
+.feature-dot.is-active { width: 26px; background: var(--fg); }
 
 /* Desktop Mac window media */
 .window-projects { display: flex; gap: 6px; margin-top: 12px; }
@@ -598,9 +604,8 @@
   .mosaic-row-one, .mosaic-row-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mosaic-one-1 { grid-column: 1 / -1; }
   .mosaic-strip { width: 180px; }
-  .feature-showcase { grid-template-columns: minmax(0, 1fr); padding: 16px; }
-  .feature-thumbs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .feature-phone { width: 42%; }
+  .feature-showcase { padding: 16px 16px 12px; }
+  .feature-slide-phone .feature-phone { width: 42%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

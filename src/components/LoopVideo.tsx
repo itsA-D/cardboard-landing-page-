@@ -101,6 +101,8 @@ export function LoopVideo({ src, poster, className = "", playOnClick = false, la
       playsInline
       preload="metadata"
       disablePictureInPicture
+      disableRemotePlayback
+      controlsList="nodownload noplaybackrate noremoteplayback"
       aria-label={label}
       onLoadedData={(event) => { setReady(true); firstFrame(event.currentTarget); }}
       onLoadedMetadata={(event) => firstFrame(event.currentTarget)}
