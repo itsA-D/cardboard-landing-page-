@@ -16,7 +16,7 @@ const REST_TILTS = [
 ];
 const PARALLAX_FACTORS = [0.6, 0.8, 1, 1.2];
 
-// Desktop (>=1024, full motion) pins a tall scroll track with the heading,
+// Desktop (>=1100px, full motion) pins a tall scroll track with the heading,
 // progress rail and glass stage advancing over seven categories. Below that,
 // or with reduced motion, the same content flattens into chips + swipe.
 export function ScrollShowcase() {
@@ -28,7 +28,7 @@ export function ScrollShowcase() {
   const count = nextCategoryNames.length;
 
   useEffect(() => {
-    const wide = window.matchMedia("(min-width: 1024px)");
+    const wide = window.matchMedia("(min-width: 1100px)");
     const motionPref = window.matchMedia("(prefers-reduced-motion: reduce)");
     const sync = () => {
       pinnedRef.current = wide.matches && !motionPref.matches;
@@ -193,12 +193,21 @@ function FluidShowcase({ active, count, onSelect, limiter }: {
 }) {
   const clips = nextCategoryVideos[active] ?? [];
   const navigate = (offset: number) => onSelect((active + offset + count) % count);
+  const chips = useRef<HTMLDivElement>(null);
+  const firstRun = useRef(true);
+  useEffect(() => {
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
+    chips.current?.querySelector<HTMLElement>(".next-chip.is-active")?.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+  }, [active]);
   return <div className="next-fluid">
     <div className="next-fluid-heading">
-      <h2>Your next <span className="next-subject" key={active}>{subjects[active]}</span>, made in Cardboard.</h2>
+      <h2>Your next <span className="next-subject" key={active}>{subjects[active]},</span> made in Cardboard.</h2>
       <p>No editing experience needed.</p>
     </div>
-    <div className="next-chips" role="group" aria-label="Video categories">
+    <div className="next-chips" ref={chips} role="group" aria-label="Video categories">
       {nextCategoryNames.map((name, index) => (
         <button
           key={name}

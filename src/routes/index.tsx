@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { ArrowUp, ArrowUpRight, Check, ChevronDown, Clapperboard, Paperclip, Plus, Send, Sparkles, WandSparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CardboardBrand } from "@/components/CardboardBrand";
+import { SmartHeader } from "@/components/SmartHeader";
 import { MacWindow } from "@/components/MacWindow";
 import { SilkBackground, type SilkState } from "@/components/SilkBackground";
 import { ThemeDock } from "@/components/ThemeDock";
@@ -55,7 +55,7 @@ function Index() {
   return <>
     <SilkBackground state={silk} />
     <PageProgress />
-    <header className="nav-pill glass"><CardboardBrand /><nav className="nav-actions" aria-label="Main navigation"><Button variant="quiet" asChild><a href="https://cardboard.ai/login">Login</a></Button><Button variant="solid" asChild><a href="https://cardboard.ai/signup">Get started<ArrowUpRight /></a></Button></nav></header>
+    <SmartHeader />
     <main className="page-content">
       <section className="hero" id="top">
         <HeroVideos />
