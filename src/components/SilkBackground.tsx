@@ -6,14 +6,16 @@ export type SilkState = { dark: boolean; burst: number };
 const vertexShader = `
 uniform float uT;
 uniform float uB;
+uniform float uScroll;
 uniform vec2 uMouse;
 varying vec3 vNormal;
 varying vec3 vPosition;
 varying vec2 vUv;
 float H(vec2 p) {
-  float waves = sin(p.x * .68 + p.y * .36 + uT * .28) * .72
+  float calm = .6 + .55 * exp(-pow((uScroll - .5) * 2.6, 2.));
+  float waves = (sin(p.x * .68 + p.y * .36 + uT * .28) * .72
     + sin(p.x * 1.05 - p.y * .7 - uT * .22) * .35
-    + sin(p.y * 1.3 + p.x * .22 + uT * .17) * .28;
+    + sin(p.y * 1.3 + p.x * .22 + uT * .17) * .28) * calm;
   float d = distance(p, uMouse);
   float bump = exp(-d*d*.22) * .7;
   float ripple = sin(d*4.2 - uT*3.) * exp(-d*.22) * uB*.35;
@@ -75,7 +77,7 @@ export function SilkBackground({ state }: { state: MutableRefObject<SilkState> }
     const color = (token: string) => new THREE.Color(css.getPropertyValue(token).trim());
     let dk = state.current.dark ? 1 : 0;
     const uniforms = {
-      uT: { value: 0 }, uB: { value: 0 }, uD: { value: dk },
+      uT: { value: 0 }, uB: { value: 0 }, uD: { value: dk }, uScroll: { value: 0 },
       uMouse: { value: new THREE.Vector2(0, 0) },
       uDarkBase: { value: color("--silk-dark-base") },
       uDarkMid: { value: color("--silk-dark-mid") },
@@ -125,6 +127,8 @@ export function SilkBackground({ state }: { state: MutableRefObject<SilkState> }
       previous = now;
       time += delta * (reduced.matches ? .15 : 1);
       dk += ((state.current.dark ? 1 : 0) - dk) * .05;
+      const pageDepth = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      uniforms.uScroll.value = pageDepth ? Math.max(0, Math.min(1, window.scrollY / pageDepth)) : 0;
       uniforms.uD.value = dk;
       uniforms.uT.value = time;
       uniforms.uB.value = state.current.burst;

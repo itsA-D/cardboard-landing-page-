@@ -17,6 +17,8 @@ export const heroCards: (MediaClip & { shape: "portrait" | "landscape" })[] = [
 ];
 
 const showcase = (name: string) => `${ASSETS}/showcase/${name}`;
+// key-framed-portal is only published under prompt-hero, not showcase/.
+const keyFramedPortal = `${ASSETS}/prompt-hero/key-framed-portal.webm`;
 
 export const showcaseClips = {
   documentary: showcase("documentary.webm"),
@@ -71,13 +73,13 @@ export const mosaicExtra: MediaClip[] = [
 ];
 
 export const categories = [
-  ["Product Showcases", [showcaseClips.productLaunch, showcaseClips.macLaunch, showcaseClips.brolls, showcaseClips.pro]],
-  ["Viral Trends", [showcaseClips.gridParle, showcaseClips.basketball, showcaseClips.newYorkMatchCuts, showcaseClips.gifMoving]],
-  ["Launch Videos", [showcaseClips.macLaunch, showcaseClips.productLaunch, showcaseClips.brolls, showcaseClips.egypt]],
-  ["UGC Ads", [showcaseClips.ugc, showcaseClips.kayeTalkingHead, showcaseClips.victoryLap, showcaseClips.basketball]],
-  ["Explainers", [showcaseClips.explainer, showcaseClips.documentary, showcaseClips.talkingHead, showcaseClips.egypt]],
-  ["Vlogs", [showcaseClips.vlog2, showcaseClips.vlogMirror, showcaseClips.fredAgain, showcaseClips.egypt]],
-  ["Podcast Clips", [showcaseClips.talkingHead, showcaseClips.kayeTalkingHead, showcaseClips.fredAgain, showcaseClips.vlog2]],
+  ["Product Showcases", [showcaseClips.productLaunch, showcaseClips.pro, showcaseClips.gifMoving, showcaseClips.macLaunch]],
+  ["Viral Trends", [showcaseClips.newYorkMatchCuts, showcaseClips.basketball, showcaseClips.victoryLap, keyFramedPortal]],
+  ["Launch Videos", [showcaseClips.macLaunch, showcaseClips.productLaunch, showcaseClips.egypt, showcaseClips.brolls]],
+  ["UGC Ads", [showcaseClips.ugc, showcaseClips.vlog2, showcaseClips.talkingHead, showcaseClips.gridParle]],
+  ["Explainers", [showcaseClips.explainer, showcaseClips.gridParle, keyFramedPortal, showcaseClips.productLaunch]],
+  ["Vlogs", [showcaseClips.vlogMirror, showcaseClips.vlog2, showcaseClips.egypt, showcaseClips.newYorkMatchCuts]],
+  ["Podcast Clips", [showcaseClips.kayeTalkingHead, showcaseClips.talkingHead, showcaseClips.fredAgain, showcaseClips.fordFerrari]],
 ] as const;
 
 export const nextCategoryNames = categories.map(([name]) => name);

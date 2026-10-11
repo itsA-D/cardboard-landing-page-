@@ -8,11 +8,12 @@ import { SilkBackground, type SilkState } from "@/components/SilkBackground";
 import { ThemeDock } from "@/components/ThemeDock";
 import { HeroVideos } from "@/components/HeroVideos";
 import { CardboardFooter } from "@/components/CardboardFooter";
-import { NextVideoShowcase } from "@/components/NextVideoShowcase";
+import { ScrollShowcase } from "@/components/ScrollShowcase";
 import { ShowcaseMosaic } from "@/components/ShowcaseMosaic";
 import { FeatureShowcase } from "@/components/FeatureShowcase";
 import { FinalCtaTiles } from "@/components/FinalCtaTiles";
 import { LiveHeadline } from "@/components/LiveHeadline";
+import { PageProgress } from "@/components/PageProgress";
 import { DescribeDemo, DirectDemo, ShareDemo } from "@/components/ThreeStepDemos";
 import { faqs, features, heroChips, plans } from "@/lib/cardboard-content";
 
@@ -53,6 +54,7 @@ function Index() {
   const icons = [Sparkles, Clapperboard, Send];
   return <>
     <SilkBackground state={silk} />
+    <PageProgress />
     <header className="nav-pill glass"><CardboardBrand /><nav className="nav-actions" aria-label="Main navigation"><Button variant="quiet" asChild><a href="https://cardboard.ai/login">Login</a></Button><Button variant="solid" asChild><a href="https://cardboard.ai/signup">Get started<ArrowUpRight /></a></Button></nav></header>
     <main className="page-content">
       <section className="hero" id="top">
@@ -74,7 +76,7 @@ function Index() {
       </div></section>
       <section className="content-section" id="features"><div className="section-heading"><h2>Everything you need to make videos</h2><p>Build the story, shape the edit, then share or export it, all in one editor.</p></div><FeatureShowcase /><div className="feature-grid">{features.map((feature, i) => { const Icon = icons[i] ?? Sparkles; return <article className="feature-card glass" key={feature.title}><Icon className="feature-icon" /><h3>{feature.title}</h3><ul>{feature.items.map((item) => <li key={item}>{item}</li>)}</ul></article>; })}</div></section>
       <section className="content-section desktop-section" id="desktop"><div className="desktop-copy"><h2>Make videos the way you do everything else</h2><p>Create directly in Cardboard, use its agent, or connect your agents to bring your project to life.</p><ul>{["Cardboard can connect to Claude Code and Codex.", "Users can work in Cardboard directly or through their agents.", "Lite is free on Apple Silicon because processing runs locally."].map((item) => <li key={item}><Check />{item}</li>)}</ul><Button variant="glass" asChild><a href="https://cardboard.ai/desktop">Learn more<ArrowUpRight /></a></Button></div><MacWindow /></section>
-      <NextVideoShowcase />
+      <ScrollShowcase />
       <section className="content-section" id="pricing"><div className="section-heading"><h2>Pricing for every stage of editing</h2><p>Every plan includes the full editing suite.<br />Launch pricing, up to 78% off your first month.</p></div><div className="pricing-grid">{plans.map((plan) => <article key={plan.name} className={`pricing-card glass${plan.name === "Creator" ? " recommended" : ""}`}>{plan.name === "Creator" && <span className="recommended-label">Recommended</span>}<h3>{plan.name}</h3><div className="price">${plan.first}<span>first month</span></div><p className="renewal">then ${plan.monthly}/mo <s>(was ${plan.was})</s></p><Button variant={plan.name === "Creator" ? "solid" : "glass"} className="plan-cta" asChild><a href="https://cardboard.ai/signup">Get started<ArrowUpRight /></a></Button><ul>{plan.items.map((item) => <li key={item}><Check />{item}</li>)}</ul></article>)}</div><div className="compare-plans"><Button variant="glass" asChild><a href="https://cardboard.ai/pricing">Compare all plans<ArrowUpRight /></a></Button></div></section>
       <section className="content-section faq-section" id="faq"><div className="section-heading"><h2>Frequently asked questions</h2></div><div className="faq-list glass">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<Plus /></summary><p>{answer}</p></details>)}</div></section>
       <section className="content-section final-section"><div className="final-cta glass"><FinalCtaTiles /><h2>Get started with one prompt.</h2><Button variant="solid" asChild><a href="https://cardboard.ai/signup">Get started<ArrowUpRight /></a></Button><p>Launch pricing on every plan. Cancel anytime.</p></div></section>
