@@ -1,0 +1,58 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+dist-ssr
+build
+.output
+.vinxi
+.tanstack/**
+.nitro
+
+# Local env files
+*.local
+.env
+.env.*
+!.env.example
+
+# Vercel build output
+.vercel
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Testing
+coverage
+
+# TypeScript cache
+*.tsbuildinfo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

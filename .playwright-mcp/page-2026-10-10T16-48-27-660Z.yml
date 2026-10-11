@@ -1,0 +1,331 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - link "Cardboard home" [ref=f2e3] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=f2e7]: Cardboard
+    - navigation "Main navigation" [ref=f2e8]:
+      - link "Login" [ref=f2e9] [cursor=pointer]:
+        - /url: https://cardboard.ai/login
+      - link "Get started" [ref=f2e10] [cursor=pointer]:
+        - /url: https://cardboard.ai/signup
+  - main [ref=f2e11]:
+    - generic [ref=f2e12]:
+      - heading "Make any video you can think of" [level=1] [ref=f2e13]:
+        - generic [aria-hidden] [ref=f2e14]:
+          - text: Make any
+          - generic [ref=f2e15]: video
+          - text: you can think of
+      - paragraph [ref=f2e17]: Describe your edit, and Cardboard's AI cuts, captions, reframes, and composes your video, in your browser or on your Mac.
+      - generic [ref=f2e18]:
+        - textbox "Describe your video" [ref=f2e19]:
+          - /placeholder: Turn my product demo into a launch video
+        - generic [ref=f2e20]:
+          - generic [ref=f2e21]:
+            - button "Attach footage" [ref=f2e22] [cursor=pointer]
+            - combobox "Video format" [ref=f2e24] [cursor=pointer]:
+              - option "Auto" [selected]
+              - option "16:9"
+              - option "9:16"
+              - option "1:1"
+          - generic [ref=f2e25]:
+            - button "Improve prompt" [ref=f2e26] [cursor=pointer]
+            - button "Create video" [ref=f2e27] [cursor=pointer]
+      - generic [ref=f2e28]:
+        - button "Launch Video" [ref=f2e29] [cursor=pointer]
+        - button "UGC" [ref=f2e30] [cursor=pointer]
+        - button "Explainer" [ref=f2e31] [cursor=pointer]
+        - button "Montage" [ref=f2e32] [cursor=pointer]
+        - button "Product Demo" [ref=f2e33] [cursor=pointer]
+        - button "Podcast Clip" [ref=f2e34] [cursor=pointer]
+    - generic [ref=f2e35]:
+      - generic [ref=f2e36]:
+        - paragraph [ref=f2e37]: Made with Cardboard
+        - heading "Remarkable video quality" [level=2] [ref=f2e38]
+      - generic [ref=f2e39]:
+        - generic [ref=f2e40]:
+          - generic [ref=f2e41]:
+            - generic "Documentary" [ref=f2e545]
+            - button "Play Documentary" [ref=f2e43] [cursor=pointer]
+          - generic "Vlog" [ref=f2e546]
+          - generic "UGC" [ref=f2e547]
+          - generic "Explainer" [ref=f2e548]
+        - generic [ref=f2e53]:
+          - generic "Fred Again" [ref=f2e549]
+          - generic "Grid Parle" [ref=f2e550]
+          - generic "Ford Ferrari" [ref=f2e551]
+          - generic "Vlog 2" [ref=f2e552]
+    - generic [ref=f2e108]:
+      - generic [ref=f2e109]:
+        - heading "Your first video in three steps" [level=2] [ref=f2e110]
+        - paragraph [ref=f2e111]: Describe it, direct it, and share it. Here's how your first cut comes together.
+      - generic [ref=f2e112]:
+        - article [ref=f2e113]:
+          - generic "Prompt and footage example" [ref=f2e114]:
+            - generic [ref=f2e115]:
+              - paragraph [ref=f2e116]: Turn my product demo into a launch video
+              - generic [ref=f2e117]:
+                - generic [ref=f2e118]:
+                  - generic [ref=f2e119]: demo.mp4
+                  - generic [ref=f2e120]: b-roll.mov
+                - button "Use this example prompt" [ref=f2e121] [cursor=pointer]
+          - generic [ref=f2e122]: "01"
+          - heading "Describe it" [level=3] [ref=f2e123]
+          - paragraph [ref=f2e124]: Use a prompt, your footage, or both, and Cardboard builds your editable first cut.
+        - article [ref=f2e125]:
+          - generic "Animated timeline with faster intro and captions" [ref=f2e126]:
+            - generic [ref=f2e127]: Make the intro faster and add captions
+            - generic [ref=f2e128]: Done. Intro trimmed and captions added.
+            - generic [ref=f2e132]:
+              - generic [ref=f2e133]:
+                - generic [ref=f2e134]: 0:00
+                - generic [ref=f2e135]: 0:01
+                - generic [ref=f2e136]: 0:02
+                - generic [ref=f2e137]: 0:03
+                - generic [ref=f2e138]: 0:04
+                - generic [ref=f2e139]: 0:05
+              - generic [ref=f2e140]: 4s → 2s
+              - generic [ref=f2e147]:
+                - generic [ref=f2e148]: Caption
+                - generic [ref=f2e149]: Caption
+                - generic [ref=f2e150]: Caption
+              - generic [ref=f2e151]: soundtrack.mp3
+          - generic [ref=f2e156]: "02"
+          - heading "Direct it" [level=3] [ref=f2e157]
+          - paragraph [ref=f2e158]: Refine the first cut through simple chat requests or right on the timeline.
+        - article [ref=f2e159]:
+          - generic "Sharing, team comments and MP4 export example" [ref=f2e160]:
+            - img "Leo" [ref=f2e169]
+            - generic [ref=f2e170]: Leo · Viewing
+            - img "Maya" [ref=f2e172]
+            - generic [ref=f2e173]: Maya · Viewing
+            - generic [ref=f2e174]: Export MP4
+            - generic [ref=f2e178]: Link copied
+            - generic [ref=f2e182]: 3 comments
+            - generic [ref=f2e185]: Shared with team
+          - generic [ref=f2e191]: "03"
+          - heading "Share it" [level=3] [ref=f2e192]
+          - paragraph [ref=f2e193]: Send a link to your team for feedback, or export the finished video.
+    - generic [ref=f2e194]:
+      - generic [ref=f2e195]:
+        - heading "Everything you need to make videos" [level=2] [ref=f2e196]
+        - paragraph [ref=f2e197]: Build the story, shape the edit, then share or export it, all in one editor.
+      - generic [ref=f2e199]:
+        - generic [ref=f2e200]: moody mountain documentary
+        - generic [ref=f2e205]:
+          - figure [ref=f2e206]
+          - figure [ref=f2e207]
+          - figure [ref=f2e208]
+          - figure "Best match" [ref=f2e209]
+          - figure [ref=f2e211]
+          - figure [ref=f2e212]
+          - figure [ref=f2e213]
+          - figure [ref=f2e214]
+          - figure [ref=f2e215]
+          - figure [ref=f2e216]
+      - generic [ref=f2e222]:
+        - article [ref=f2e223]:
+          - heading "Build the story" [level=3] [ref=f2e227]
+          - list [ref=f2e228]:
+            - listitem [ref=f2e229]: Generate video, images, music, and sound effects.
+            - listitem [ref=f2e230]: Create motion graphics from a prompt.
+            - listitem [ref=f2e231]: Clone your voice and narrate in it.
+            - listitem [ref=f2e232]: Source relevant B-roll from the internet.
+            - listitem [ref=f2e233]: Use reference links to videos you like.
+        - article [ref=f2e234]:
+          - heading "Shape the edit" [level=3] [ref=f2e240]
+          - list [ref=f2e241]:
+            - listitem [ref=f2e242]: Cut dead air, filler words, and retakes.
+            - listitem [ref=f2e243]: Pull the best moments from long recordings.
+            - listitem [ref=f2e244]: Captions, reframing, and chat-directed revisions.
+        - article [ref=f2e245]:
+          - heading "Work and publish your way" [level=3] [ref=f2e249]
+          - list [ref=f2e250]:
+            - listitem [ref=f2e251]: Connect Claude Code or Codex through the desktop app.
+            - listitem [ref=f2e252]: Share work with a link.
+            - listitem [ref=f2e253]: Render an hour of footage in about five minutes.
+    - generic [ref=f2e254]:
+      - generic [ref=f2e255]:
+        - heading "Make videos the way you do everything else" [level=2] [ref=f2e256]
+        - paragraph [ref=f2e257]: Create directly in Cardboard, use its agent, or connect your agents to bring your project to life.
+        - list [ref=f2e258]:
+          - listitem [ref=f2e259]: Cardboard can connect to Claude Code and Codex.
+          - listitem [ref=f2e262]: Users can work in Cardboard directly or through their agents.
+          - listitem [ref=f2e265]: Lite is free on Apple Silicon because processing runs locally.
+        - link "Learn more" [ref=f2e268] [cursor=pointer]:
+          - /url: https://cardboard.ai/desktop
+      - generic "Cardboard Mac editor preview" [ref=f2e269]:
+        - generic [ref=f2e270]: Product launch
+        - generic [ref=f2e278]:
+          - generic [ref=f2e279]: Cardboard
+          - generic [ref=f2e283]:
+            - figure "Piece Runner launch" [ref=f2e284]
+            - figure "Makers documentary" [ref=f2e286]
+          - generic [ref=f2e288]: Turn my product demo into a launch video
+          - generic [ref=f2e289]: Make the intro faster and add captions
+          - generic [ref=f2e290]: Describe your edit
+        - generic [ref=f2e301]:
+          - generic [ref=f2e302]: ▶ 00:12 / 00:30
+          - generic [ref=f2e303]: − 100% +
+    - region "Your next video, made in Cardboard" [ref=f2e323]:
+      - generic [ref=f2e325]:
+        - generic [ref=f2e326]:
+          - heading "Your next product showcase, made in Cardboard." [level=2] [ref=f2e327]: Your next product showcase,made in Cardboard.
+          - paragraph [ref=f2e328]: No editing experience needed.
+        - generic [ref=f2e329]:
+          - navigation "Video categories" [ref=f2e330]:
+            - button "Product Showcases" [pressed] [ref=f2e331] [cursor=pointer]
+            - button "Viral Trends" [ref=f2e333] [cursor=pointer]
+            - button "Launch Videos" [ref=f2e335] [cursor=pointer]
+            - button "UGC Ads" [ref=f2e337] [cursor=pointer]
+            - button "Explainers" [ref=f2e339] [cursor=pointer]
+            - button "Vlogs" [ref=f2e341] [cursor=pointer]
+            - button "Podcast Clips" [ref=f2e343] [cursor=pointer]
+          - generic "Product Showcases examples" [ref=f2e345]
+    - generic [ref=f2e355]:
+      - generic [ref=f2e356]:
+        - heading "Pricing for every stage of editing" [level=2] [ref=f2e357]
+        - paragraph [ref=f2e358]: Every plan includes the full editing suite.Launch pricing, up to 78% off your first month.
+      - generic [ref=f2e359]:
+        - article [ref=f2e360]:
+          - heading "Lite" [level=3] [ref=f2e361]
+          - generic [ref=f2e362]:
+            - text: $5
+            - generic [ref=f2e363]: first month
+          - paragraph [ref=f2e364]:
+            - text: then $8/mo
+            - generic [ref=f2e365]: (was $10)
+          - link "Get started" [ref=f2e366] [cursor=pointer]:
+            - /url: https://cardboard.ai/signup
+          - list [ref=f2e367]:
+            - listitem [ref=f2e368]: Standard usage
+            - listitem [ref=f2e371]: Generative AI not included
+            - listitem [ref=f2e374]: Captions
+            - listitem [ref=f2e377]: Reframing
+            - listitem [ref=f2e380]: Video cleanup
+            - listitem [ref=f2e383]: Motion graphics
+            - listitem [ref=f2e386]: Full suite of editing tools
+        - article [ref=f2e389]:
+          - heading "Starter" [level=3] [ref=f2e390]
+          - generic [ref=f2e391]:
+            - text: $9
+            - generic [ref=f2e392]: first month
+          - paragraph [ref=f2e393]:
+            - text: then $29/mo
+            - generic [ref=f2e394]: (was $40)
+          - link "Get started" [ref=f2e395] [cursor=pointer]:
+            - /url: https://cardboard.ai/signup
+          - list [ref=f2e396]:
+            - listitem [ref=f2e397]: 2.5x usage
+            - listitem [ref=f2e400]: 400 generative credits (base models)
+            - listitem [ref=f2e403]: Everything in Lite
+            - listitem [ref=f2e406]: Unlimited exports
+            - listitem [ref=f2e409]: NLE exports
+            - listitem [ref=f2e412]: AI-generated music
+            - listitem [ref=f2e415]: Stock footage
+        - article [ref=f2e418]:
+          - generic [ref=f2e419]: Recommended
+          - heading "Creator" [level=3] [ref=f2e420]
+          - generic [ref=f2e421]:
+            - text: $30
+            - generic [ref=f2e422]: first month
+          - paragraph [ref=f2e423]:
+            - text: then $59/mo
+            - generic [ref=f2e424]: (was $100)
+          - link "Get started" [ref=f2e425] [cursor=pointer]:
+            - /url: https://cardboard.ai/signup
+          - list [ref=f2e426]:
+            - listitem [ref=f2e427]: 10x usage
+            - listitem [ref=f2e430]: 1,500 generative credits (premium models)
+            - listitem [ref=f2e433]: Everything in Starter
+            - listitem [ref=f2e436]: Larger file support
+            - listitem [ref=f2e439]: Voice cloning
+            - listitem [ref=f2e442]: Web-sourced B-roll
+            - listitem [ref=f2e445]: 4K exports
+            - listitem [ref=f2e448]: Direct clips from X, Instagram, YouTube, Vimeo and more
+            - listitem [ref=f2e451]: Match text styles and audio from any video link
+        - article [ref=f2e454]:
+          - heading "Pro" [level=3] [ref=f2e455]
+          - generic [ref=f2e456]:
+            - text: $89
+            - generic [ref=f2e457]: first month
+          - paragraph [ref=f2e458]:
+            - text: then $175/mo
+            - generic [ref=f2e459]: (was $250)
+          - link "Get started" [ref=f2e460] [cursor=pointer]:
+            - /url: https://cardboard.ai/signup
+          - list [ref=f2e461]:
+            - listitem [ref=f2e462]: 30x usage
+            - listitem [ref=f2e465]: 5,000 generative credits (all models)
+            - listitem [ref=f2e468]: Everything in Creator
+            - listitem [ref=f2e471]: Priority processing
+            - listitem [ref=f2e474]: Early access to advanced AI features
+            - listitem [ref=f2e477]: Higher usage limits
+      - link "Compare all plans" [ref=f2e481] [cursor=pointer]:
+        - /url: https://cardboard.ai/pricing
+    - generic [ref=f2e482]:
+      - heading "Frequently asked questions" [level=2] [ref=f2e484]
+      - generic [ref=f2e485]:
+        - group [ref=f2e486]:
+          - generic "Which devices does Cardboard work on?" [ref=f2e487] [cursor=pointer]
+        - group [ref=f2e489]:
+          - generic "What's the difference between local and cloud processing?" [ref=f2e490] [cursor=pointer]
+        - group [ref=f2e492]:
+          - generic "Can I use my own AI agent?" [ref=f2e493] [cursor=pointer]
+        - group [ref=f2e495]:
+          - generic "Is my footage private?" [ref=f2e496] [cursor=pointer]
+        - group [ref=f2e498]:
+          - generic "How do I share or export my video?" [ref=f2e499] [cursor=pointer]
+    - generic [ref=f2e502]:
+      - heading "Get started with one prompt." [level=2] [ref=f2e503]
+      - link "Get started" [ref=f2e504] [cursor=pointer]:
+        - /url: https://cardboard.ai/signup
+      - paragraph [ref=f2e505]: Launch pricing on every plan. Cancel anytime.
+    - generic [ref=f2e507]:
+      - generic [ref=f2e509]:
+        - generic [ref=f2e510]:
+          - paragraph [ref=f2e511]: Create stunningcontent 10x fasterwith our agenticvideo editor.
+          - navigation "Social media" [ref=f2e512]:
+            - link "Cardboard on X" [ref=f2e513] [cursor=pointer]:
+              - /url: https://x.com/usecardboard
+            - link "Cardboard on Instagram" [ref=f2e514] [cursor=pointer]:
+              - /url: https://www.instagram.com/usecardboard
+            - link "Cardboard on LinkedIn" [ref=f2e515] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/cardboardinc
+        - navigation "Product" [ref=f2e516]:
+          - heading "Product" [level=3] [ref=f2e517]
+          - link "Pricing" [ref=f2e518] [cursor=pointer]:
+            - /url: https://cardboard.ai/pricing
+          - link "Changelog" [ref=f2e519] [cursor=pointer]:
+            - /url: https://cardboard.ai/changelog
+          - link "Status" [ref=f2e520] [cursor=pointer]:
+            - /url: https://status.cardboard.ai
+        - navigation "Legal" [ref=f2e521]:
+          - heading "Legal" [level=3] [ref=f2e522]
+          - link "Privacy" [ref=f2e523] [cursor=pointer]:
+            - /url: https://cardboard.ai/privacy
+          - link "Terms of Service" [ref=f2e524] [cursor=pointer]:
+            - /url: https://cardboard.ai/terms
+        - navigation "Company" [ref=f2e525]:
+          - heading "Company" [level=3] [ref=f2e526]
+          - link "Blog" [ref=f2e527] [cursor=pointer]:
+            - /url: https://cardboard.ai/blog
+          - link "Careers" [ref=f2e528] [cursor=pointer]:
+            - /url: https://cardboard.ai/careers
+          - link "Hard problems" [ref=f2e529] [cursor=pointer]:
+            - /url: https://cardboard.ai/hard-problems
+          - link "Y Combinator" [ref=f2e530] [cursor=pointer]:
+            - /url: https://www.ycombinator.com/companies/cardboard
+          - link "Contact" [ref=f2e531] [cursor=pointer]:
+            - /url: mailto:founders@cardboard.ai
+      - generic "Cardboard" [ref=f2e532]:
+        - img "Cardboard" [ref=f2e533]:
+          - generic [aria-hidden]: Cardboard
+      - generic [ref=f2e535]:
+        - generic [ref=f2e536]: © 2026 Cardboard Inc. All rights reserved.
+        - generic [ref=f2e537]:
+          - text: Made with
+          - img "love" [ref=f2e538]
+          - text: in SF
+  - group "Color theme" [ref=f2e540]:
+    - button "Dark" [ref=f2e542] [cursor=pointer]
+    - button "Light" [pressed] [ref=f2e543] [cursor=pointer]
