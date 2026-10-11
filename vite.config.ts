@@ -1,5 +1,5 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
+// The vite-tanstack-config preset already includes the following — do NOT add
+// them manually or the app will break with duplicate plugins:
 //   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
 //     nitro (build-only using cloudflare as a default target), VITE_* env injection, @ path alias,
 //     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
@@ -13,8 +13,8 @@ export default defineConfig({
     server: { entry: "server" },
   },
   // Deploy target: Vercel. Nitro emits a Vercel Build Output API artifact in
-  // `.vercel/output`, which Vercel deploys as-is. Lovable's sandbox pins its own
-  // preset via LOVABLE_NITRO_PRESET, so this override only affects self-hosted
-  // builds (e.g. Vercel) and leaves the Lovable preview untouched.
+  // `.vercel/output`, which Vercel deploys as-is. The hosting sandbox pins its
+  // own preset via the NITRO_PRESET environment variable, so this override only
+  // affects self-hosted builds (e.g. Vercel) and leaves sandbox previews untouched.
   nitro: { preset: "vercel" },
 });

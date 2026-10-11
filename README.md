@@ -1,14 +1,7 @@
-# Welcome to your Lovable project
+# Cardboard Landing
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+Marketing landing for [Cardboard](https://cardboard.ai), the agentic AI video
+editor. Make any video you can think of.
 
 ## Development
 
@@ -21,9 +14,21 @@ npm i
 npm run dev
 ```
 
+## Deploy
+
+The production build targets Vercel:
+
+```sh
+npm run build
+```
+
+Nitro emits a Vercel Build Output API artifact in `.vercel/output`, which Vercel
+deploys as-is.
+
 ## Built with
 
 - TanStack Start
 - TypeScript
 - React
 - Tailwind CSS
+- Three.js
